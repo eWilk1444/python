@@ -2,7 +2,7 @@
 
 # Dimensions of rectangle inputs
 length = 12
-width = 7
+width = 72
 
 # Calculates area of rectangle based on inputs
 area = length * width
