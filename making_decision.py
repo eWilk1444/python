@@ -5,24 +5,40 @@
 
 # variables
 age = input("How old are you? ")
-senior = False
-alchohol = False
-vote = False
-drive = False
-
-print(senior)
+drive = bool(True)
+vote = bool(True)
+drink = bool(True)
+senior = bool(True)
 
 # logic
-if int(age) >= 65:
-    senior = True
-elif age >= 21:
-    alchohol = True
-elif age >= 18:
-    vote = True
-elif age >= 16:
-    drive = True
-else:
-    senior = False
-    alchohol = False
-    vote = False
-    drive = False
+if age < 16
+vote = bool(False)
+drink = bool(False)
+senior = bool(False)
+elif age <= 18
+drink = bool(False)
+senior = bool(False)
+elif age <= 21
+senior = bool(False)
+else
+return
+
+if drive == bool(True)
+print("You are old enough to drive.")
+else
+print("You cannot drive.")
+
+if vote == bool(True)
+print("You are old enough to vote")
+else
+print("You cannot vote.")
+
+if drink == bool(True)
+print("You can buy alchohol and tobacco")
+else
+print("You cannot purchase alchohol or tobacco")
+
+if senior == bool(True)
+print("You are eligible for a senior's discount")
+else
+print("You are not eligible for a senior's discount")
