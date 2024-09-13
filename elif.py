@@ -3,7 +3,7 @@
 """
 
 # variables
-grade_number = int(input("Enter your grade as a whole number"))
+grade_number = int(input("Enter your grade as a whole number "))
 # logic
 if grade_number < 60:
     print("The equivilent letter grade would be a: F")
@@ -16,4 +16,4 @@ elif grade_number <= 89:
 elif grade_number >= 90:
     print("The equivilent letter grade would be a: A")
 else:
-    pass
+    print("You did not enter a valid number, please try again.")
