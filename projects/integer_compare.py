@@ -1,5 +1,5 @@
 """
-    Asks user for two distinct integers
+    Asks user for two integers
     compares them and prints results of multiple
     tests to screen
 """
@@ -19,7 +19,7 @@ if num1 % 2 == 0 and num2 % 2 == 0:
     print("True")
 else:
     print("False")
-# got some help from Chat GPT https://chatgpt.com/share/66f2192b-1c1c-800f-8964-8585c047bace
+# got some help from Chat GPT https://chatgpt.com/share/66f2192b-1c1c-800f-8964-8585c047bace, helped me understand precedence
 
 print("Are either integers the number 42? ")
 if num1 == 42 or num2 == 42:
