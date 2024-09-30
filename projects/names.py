@@ -27,6 +27,6 @@ while need_swap:
             peoples_names[i], peoples_names[i + 1] = peoples_names[i + 1], peoples_names[i]
 
 # Print the sorted list
-print(peoples_names)
+print(f"The sorted list of names is {peoples_names}.")
 peoples_names.reverse()
-print(peoples_names)
+print(f"The reversed list of names is {peoples_names}.")
