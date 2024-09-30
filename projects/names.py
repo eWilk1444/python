@@ -3,14 +3,18 @@
 """
 
 # Initialize a list of numbers
-peoples_names = str(input("\nPlease provide a name in all lowercase. "))
+peoples_names = [input("\nPlease provide a name in all lowercase. ")]
+
+# https://chatgpt.com/share/66fb2454-2e5c-800f-9df4-5742bfe83fa1 I forgot to add the brackets to make it a list instead of a string *facepalm*
 
 # collects all 5 names for sorting from user
-if len(peoples_names) < 5:
-    peoples_names = str(input("\nPlease enter another name in all lowercase. "))
+while len(peoples_names) < 5:
+    peoples_names.append (input("\nPlease enter another name in all lowercase. "))
+
+# https://chatgpt.com/share/66fb2454-2e5c-800f-9df4-5742bfe83fa1 I similarily forgot how the 'not' operator works and that it would only check the list once
 
 # Flag to track if a swap has occurred
-need_swap = bool(True)
+need_swap = True
 
 # Continue looping until no swaps occur
 while need_swap:
@@ -23,4 +27,6 @@ while need_swap:
             peoples_names[i], peoples_names[i + 1] = peoples_names[i + 1], peoples_names[i]
 
 # Print the sorted list
+print(peoples_names)
+peoples_names.reverse()
 print(peoples_names)
