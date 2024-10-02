@@ -31,4 +31,9 @@ def calculate_interest(principal, rate, time):
 
 # invoking interest calculating function and print to terminal
 simple_interest_total = calculate_interest(principal, rate, time)
-print(f"The simple interest accrued would be: {simple_interest_total}")
+print(f"The simple interest for a principal amount of ${principal:.2f} \
+at an interest rate of {rate}%, over a period of {time} years is \
+${simple_interest_total:.2f}. ")
+
+# wasn't very helpful... https://chatgpt.com/share/66fd97fb-a538-800f-8230-ebeaad6ceeac
+# It peeves me to have the text in the same indent as the print function but it works so whatever
