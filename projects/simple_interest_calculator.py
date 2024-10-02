@@ -2,10 +2,12 @@
     Calculates annual simple interest
 """
 
+# greets user
 print("*" * 50)
 print("Hello. Thank you for using our interest calculating software.")
 print("*" * 50)
 
+# prompts user to input necessary data
 principal = float(input(
     "\nPlease enter the principal amount: "))
 rate = float(input(
