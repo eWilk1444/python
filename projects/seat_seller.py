@@ -23,8 +23,8 @@ while len(available_seats) > 0 and wanted_seat != 0:
     #     print(f"\nYou have reserved seat {
     #           wanted_seat}. Enter 0 if you are finished with your purchase.")
     # https://chatgpt.com/share/66f45d4c-d1c0-800f-a4fe-60fec9e8e4aa
-    elif wanted_seat = 0:
-        print(f"The seat(s) you have reserved are: {all_wanted_seats}.")
-        print("Thank you for your patronage.")
+    elif wanted_seat == 0:
+        print(f"\nThe seat(s) you have reserved are: {all_wanted_seats}.")
+        print("\nThank you for your patronage.\n")
     else:
         print("\nSorry, that seat is unavailable.\n")
