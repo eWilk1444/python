@@ -1,6 +1,8 @@
 """
     Creates a list of 1-20 seats, and prompts user to select seats to purchase
     https://chatgpt.com/share/66f45d4c-d1c0-800f-a4fe-60fec9e8e4aa
+
+    Used AI to figure out why the while loop didn't function as expected
 """
 
 available_seats = [1, 2, 3, 4, 5, 6, 7, 8, 9,
