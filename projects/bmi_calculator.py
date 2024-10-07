@@ -31,13 +31,13 @@ def main():
 
     # categorizes user BMI and prints category to terminal
     if bmi < 18.5:
-        print("\nYou are underweight.\n")
+        print("\nYou are classified as underweight.\n")
     elif 18.5 <= bmi <= 24.9:
-        print("\nYou are a normal weight.\n")
+        print("\nYou are classified as having a normal weight.\n")
     elif 25 <= bmi <= 29.9:
-        print("\nYou are overweight.\n")
+        print("\nYou are classified as overweight.\n")
     else:
-        print("\nYou are obese.\n")
+        print("\nYou are classified as obese.\n")
 
 
 # call main function
