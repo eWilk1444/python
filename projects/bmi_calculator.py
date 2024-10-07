@@ -20,7 +20,7 @@ def main():
     user_weight = float(input("\nWhat is your weight in pounds? "))
     user_height = float(input("\nHow tall are you in inches? "))
 
-    # using conversions
+    # using conversions for calculations
     user_weight_metric = user_weight * KILO_CONVERSION
     user_height_metric = user_height * METER_CONVERSION
 
