@@ -12,7 +12,7 @@ def square_number():
     This function squares a inputted number and checks for bad input
     """
     number = input("Enter a number to square: ")
-    try:
+    try:  # ChatGPT was pretty unhelpful, but worth a shot anyways https://chatgpt.com/share/670d6e2f-6838-800f-ac70-2b48e8291c6a
         squared_number = int(number) ** 2
         print(f"The square of {number} is {squared_number}.")
     except ValueError:  # when error is recieved, ask if they want to try again
