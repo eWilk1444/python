@@ -7,18 +7,13 @@ def factorial_calculate(n):
     if n <= 0:
         return n
     else:
-        return n * calculate_factorial(n-1)
-
-
-def get_user_input():
-    user_input = int(
-        input("\nPlease enter an integer to calculate its factorial. "))
+        return n * factorial_calculate(n-1)
 
 
 def main():
-    number = get_user_input
+    number = int(input("\nPlease enter an integer to calculate its factorial. "))
     total = factorial_calculate(number)
-    print(f"\n{number} factorial is {total}.\n")
+    print(f"\nThe factorial of {number} is {total}. ")
 
 
 main()
