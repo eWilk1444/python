@@ -27,17 +27,17 @@ def user_input():
 def main():
     gen_number = number_generator()
     guessed_number = user_input()
-    absolute = abs(guessed_number - gen_number)
+    distance_from_guess = abs(guessed_number - gen_number)
 
-    if absolute == 0:
+    if distance_from_guess == 0:
         print(f"\nCongrats! {gen_number} was the number!")
-    elif absolute <= 5:
+    elif distance_from_guess <= 5:
         print("\nVery Hot!")
         main()
-    elif absolute <= 15:
+    elif distance_from_guess <= 15:
         print("\nHot.")
         main()
-    elif absolute <= 25:
+    elif distance_from_guess <= 25:
         print("\nCool..")
         main()
     else:
