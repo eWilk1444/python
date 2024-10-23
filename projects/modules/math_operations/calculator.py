@@ -4,25 +4,28 @@
 
 
 def add(a, b):
-    """_summary_
+    """
+    adds
 
     Args:
-        a (float): _description_
-        b (float): _description_
+        a (float): first number
+        b (float): second number
 
     Returns:
-        _type_: _description_ float anser for a + b
+        float: answer for a + b
     """
     return a + b
 
 
 def subtract(a, b):
-        """_summary_
+    """
+    subtracts
 
     Args:
-        a (float): _description_
-        b (float): _description_
+        a (float): first number
+        b (float): second number
 
     Returns:
-        _type_: _description_ float anser for a - b 
+        float: answer for a - b
+    """"
     return a - b
