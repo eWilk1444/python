@@ -10,7 +10,8 @@ GEN_NUMBER = random.randint(0, 101)
 
 
 def user_input():
-    """gets user input from the terminal
+    """
+    gets user input from the terminal
 
     Returns:
         float: number that user enteres into terminal
