@@ -91,6 +91,7 @@ print(string16.startswith('py'))
 # Example: Remove spaces from " python "
 string17 = " python "
 # Your code here
+print(string17.strip())
 # TODO: Use the swapcase() method to swap the case of all characters in the string
 # Example: Swap case of "Python"
 string18 = "Python"
