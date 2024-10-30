@@ -1,4 +1,6 @@
-# Python String Methods Practice
+"""
+    Python String Methods Practice
+"""
 # TODO: Use the capitalize() method to capitalize the first letter of the string
 # Example: "python" -> "Python"
 string1 = "python"
