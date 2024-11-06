@@ -9,3 +9,14 @@ Exception Handling: Use try and except statements for ValueError and IndexError,
 Upload to GitHub: Upload your completed script to your GitHub repository.
 Submission: Submit the GitHub repository link containing your script.
 """
+
+
+def flower_list_input():
+    flower_list = ()
+
+
+def main():
+    flower_list_input()
+
+
+main()
