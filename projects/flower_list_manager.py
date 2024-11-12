@@ -48,8 +48,8 @@ def main():
             print(f"{flower_to_check}'s position in the list is at spot number {flower_list.index(flower_name) + 1}.")
     except ValueError:
         print("Oops, please enter the name of the flower you want to find.")
-    except TypeError:
-        print("Whoops, please enter alphabetical characters.")
+    except IndexError:
+        print("Whoops, that spot doesn't exist in the list!")
 
 
 # invoking main
