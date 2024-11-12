@@ -45,7 +45,9 @@ def main():
                 is_flower = True
                 break # when finding the first instance of the flower, stop loop
         if is_flower:
-            print(f"{flower_to_check}'s position in the list is at spot number {flower_list.index(flower_name) + 1}.")
+            print(f"The flower {flower_to_check} is in the list is at spot number {flower_list.index(flower_to_check) + 1}.")
+        else:
+            print(f"{flower_to_check} is not in the list.")
     except ValueError:
         print("Oops, please enter the name of the flower you want to find.")
     except IndexError:
