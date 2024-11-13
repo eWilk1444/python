@@ -31,7 +31,7 @@ class Pet:
     def owner_first_name(self):
         return self.__owner_first_name
 
-    @_owner_first_name.setter
+    @owner_first_name.setter
     def owner_first_name(self, value):
         self.__owner_first_name = value
 
@@ -39,7 +39,7 @@ class Pet:
     def owner_last_name(self):
         return self.__owner_last_name
 
-    @_owner_last_name.setter
+    @owner_last_name.setter
     def owner_last_name(self, value):
         self.__owner_last_name = value
 
@@ -47,7 +47,7 @@ class Pet:
     def pet_id(self):
         return self.__pet_id
 
-    @_pet_id.setter
+    @pet_id.setter
     def pet_id(self, value):
         self.__pet_id = value
 
@@ -55,7 +55,7 @@ class Pet:
     def pet_name(self):
         return self.__pet_name
 
-    @_pet_name.setter
+    @pet_name.setter
     def pet_name(self, value):
         self.__pet_name = value
 
@@ -63,7 +63,7 @@ class Pet:
     def pet_type(self):
         return self.__pet_type
 
-    @_pet_type.setter
+    @pet_type.setter
     def pet_type(self, value):
         self.__pet_type = value
 
@@ -76,8 +76,12 @@ def main():
     pet_2 = Pet("Jane", "Doe", "025304", "Spot")
     pet_3 = Pet("Mark", "Konnerman", "657842",
                 "GE Top-Loading Washing Machine", "Cat")
+
     pet_1._pet_type = "Reptile"
-    print_pet_details()
+
+    pet_1.print_pet_details()
+    pet_2.print_pet_details()
+    pet_3.print_pet_details()
 
 
 main()
