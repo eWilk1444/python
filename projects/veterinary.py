@@ -13,6 +13,7 @@ Write a function check_property that uses hasattr() to verify if a property exis
 Display Information:
 Use display_pet_info to print details for each pet.
 Show examples of check_property being used on various properties and pets.
+    https://chatgpt.com/share/67350c84-d758-800f-9ced-04f469e0760c 
     """
 
 
@@ -27,43 +28,43 @@ class Pet:
 
     # generated using 'Python Getter Setter' extention
     @property
-    def _owner_first_name(self):
+    def owner_first_name(self):
         return self.__owner_first_name
 
     @_owner_first_name.setter
-    def _owner_first_name(self, value):
+    def owner_first_name(self, value):
         self.__owner_first_name = value
 
     @property
-    def _owner_last_name(self):
+    def owner_last_name(self):
         return self.__owner_last_name
 
     @_owner_last_name.setter
-    def _owner_last_name(self, value):
+    def owner_last_name(self, value):
         self.__owner_last_name = value
 
     @property
-    def _pet_id(self):
+    def pet_id(self):
         return self.__pet_id
 
     @_pet_id.setter
-    def _pet_id(self, value):
+    def pet_id(self, value):
         self.__pet_id = value
 
     @property
-    def _pet_name(self):
+    def pet_name(self):
         return self.__pet_name
 
     @_pet_name.setter
-    def _pet_name(self, value):
+    def pet_name(self, value):
         self.__pet_name = value
 
     @property
-    def _pet_type(self):
+    def pet_type(self):
         return self.__pet_type
 
     @_pet_type.setter
-    def _pet_type(self, value):
+    def pet_type(self, value):
         self.__pet_type = value
 
     def print_pet_details(self):
@@ -71,12 +72,12 @@ class Pet:
 
 
 def main():
-    pet_1 = Pet("John", "Doe", "902453", "Mr.Scaly", "Bird")
+    pet_1 = Pet("John", "Doe", "902453", "Mr. Snake", "Bird")
     pet_2 = Pet("Jane", "Doe", "025304", "Spot")
     pet_3 = Pet("Mark", "Konnerman", "657842",
                 "GE Top-Loading Washing Machine", "Cat")
-    pet_1._pet_type.setter("Reptile")
-    print(print_pet_details())
+    pet_1._pet_type = "Reptile"
+    print_pet_details()
 
 
 main()
