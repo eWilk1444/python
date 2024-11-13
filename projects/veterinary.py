@@ -71,8 +71,10 @@ class Pet:
 
 
 def main():
-    pet_1 = Pet("John", "Doe", "902453", "Mr.Scaly", "Iguana")
+    pet_1 = Pet("John", "Doe", "902453", "Mr.Scaly", "Reptile")
     pet_2 = Pet("Jane", "Doe", "025304", "Spot")
+    pet_3 = Pet("Mark", "Konnerman", "657842",
+                "GE Top-Loading Washing Machine", "Cat")
     pet_1._pet_type("Cat")
     print(print_pet_details())
 
