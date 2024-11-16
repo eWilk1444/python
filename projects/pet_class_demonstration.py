@@ -18,6 +18,7 @@
         getattr(): Use it to access an attribute of a Pet instance.
         isinstance(): Check if an instance is of the Pet class.
 
+        https://chatgpt.com/share/67381c6a-b968-800f-a451-ca995a3aefa1 
 """
 
 class Pet:
