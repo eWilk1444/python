@@ -13,12 +13,16 @@ Write a function check_property that uses hasattr() to verify if a property exis
 Display Information:
 Use display_pet_info to print details for each pet.
 Show examples of check_property being used on various properties and pets.
-    https://chatgpt.com/share/67350c84-d758-800f-9ced-04f469e0760c 
+    https://chatgpt.com/share/67350c84-d758-800f-9ced-04f469e0760c
+    https://chatgpt.com/share/6738146a-aca8-800f-b965-513a20e1e04d 
     """
-
 
 class Pet:
 
+    # class variable
+    vet_name = "Purr-fect Vetrinary Clinic"
+
+    # initializing class
     def __init__(self, owner_first_name, owner_last_name, pet_id, pet_name, pet_type="Dog"):
         self.__owner_first_name = owner_first_name
         self.__owner_last_name = owner_last_name
@@ -40,7 +44,7 @@ class Pet:
         return self.__owner_last_name
 
     @owner_last_name.setter
-    def owner_last_name(self, value):
+    def owner_last_name(self, value):   
         self.__owner_last_name = value
 
     @property
@@ -67,21 +71,33 @@ class Pet:
     def pet_type(self, value):
         self.__pet_type = value
 
-    def print_pet_details(self):
+    # method that prints individual pet object vars to terminal
+    def display_pet_info(self):
         print("Pet details:", vars(self))
+
+# checks pet for specific property
+def check_property(pet, attribute):
+    return hasattr(pet, attribute)
 
 
 def main():
     pet_1 = Pet("John", "Doe", "902453", "Mr. Snake", "Bird")
     pet_2 = Pet("Jane", "Doe", "025304", "Spot")
-    pet_3 = Pet("Mark", "Konnerman", "657842",
+    pet_3 = Pet("Mark", "Jacobs" , "657842",
                 "GE Top-Loading Washing Machine", "Cat")
+    
+    # changing pet_type for Mr. Snake (pet_1)
+    pet_1.pet_type = "Snake"
 
-    pet_1._pet_type = "Reptile"
+    # printing pets to terminal
+    pet_1.display_pet_info()
+    pet_2.display_pet_info()
+    pet_3.display_pet_info()
 
-    pet_1.print_pet_details()
-    pet_2.print_pet_details()
-    pet_3.print_pet_details()
+    # checking properties
+    print(f"pet_1 has a pet ID: {check_property(pet_1, 'pet_id')}.")
+    print(f"pet_2 has the name of the vet attatched: {check_property(pet_2, "vet_name")}.") # class var so it should be 'True' as the class variable is always included in the objects
+    print(f"pet_3 has an owner with the last name 'Donnerman': {check_property(pet_3, "Donnerman")}.")
 
 
 main()
