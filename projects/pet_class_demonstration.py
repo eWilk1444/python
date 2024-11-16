@@ -70,6 +70,7 @@ def main():
     pet_3 = Pet("Dog", "Chocolate Labrador", "Kasey")
 
     # tuple because it doesn't change
+    # didn't want ChatGPT to an example of what to do, but it's the best solution I could come up with as well. I could've just done it with the three seperate calls but that's redundant
     pets_tuple = (pet_1, pet_2, pet_3)
     for pet in pets_tuple:
         pet.print_details()
