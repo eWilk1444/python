@@ -11,7 +11,7 @@ Hourly pay rate
 Implement accessor and mutator methods (getters and setters) for each class.
 
 Assignment Part 2: Implementing and Testing
- 
+
 
 Part 2: Write a script to:
 
@@ -43,6 +43,13 @@ class Employee:
     def number(self, value):
         self.__number = value
 
+    def __str__(self):
+        return f"Employee(Name: {self.__name}, Employee Number: {self.__number})"
+
+    def info_getter():
+        name = input("Please enter employee name:")
+        number = input("Please enter employee number: ")
+
 
 class Production_Worker:
     def __init__(self, name, number, shift, pay_rate):
@@ -66,8 +73,27 @@ class Production_Worker:
     def pay_rate(self, value):
         self.__pay_rate = value
 
+    def __str__(self):
+        return f"{super().__str__()}, Shift: {self.__shift}, Wage: {self.__pay_rate})"
+
+    def info_getter():
+        try:
+            shift = int(
+                input("Please enter '1' for day shift, and '2' for night shift."))
+            pay_rate = float(input("Please enter hourly wage: "))
+        except TypeError:
+            print("Please enter a number.")
+        except ValueError:
+            print(
+                "Please enter either the number 1, for day shift, or 2, for night shift.")
+
 
 def main():
+
+    Employee.info_getter()
+    Production_Worker.info_getter()
+
+    prod_worker_1 = Production_Worker()
 
 
 main()
