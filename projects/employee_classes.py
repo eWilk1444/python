@@ -47,7 +47,7 @@ class Employee:
         return f"Employee(Name: {self.__name}, Employee Number: {self.__number})"
 
 
-class Production_Worker:
+class ProductionWorker:
     def __init__(self, name, number, shift, pay_rate):
         super().__init__(name, number)
         self.__shift = shift
@@ -75,7 +75,7 @@ class Production_Worker:
 
 def main():
 
-    prod_worker_1 = Production_Worker()
+    prod_worker_1 = ProductionWorker()
 
 
 main()
