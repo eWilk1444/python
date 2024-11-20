@@ -18,6 +18,7 @@ Part 2: Write a script to:
 Create an instance of ProductionWorker.
 Prompt the user for each attribute's data.
 Store and then display the data using the object's methods.
+https://chatgpt.com/share/673e4291-21f0-800f-a78c-af87e58cd820 
 """
 
 
@@ -44,18 +45,21 @@ class Employee:
         self.__number = value
 
     def __str__(self):
-        return f"Employee(Name: {self.__name}, Employee Number: {self.__number})"
+        return f"Employee(Name: {self.__name}, Employee Number: {self.__number}"
+
+# subclass of Employee
 
 
-class ProductionWorker:
+class ProductionWorker(Employee):
     def __init__(self, name, number, shift, pay_rate):
         super().__init__(name, number)
         self.__shift = shift
         self.__pay_rate = pay_rate
 
+    # generated using Python Getter Setter
     @property
     def shift(self):
-        return self.__shift = shift
+        return self.__shift
 
     @shift.setter
     def shift(self, value):
@@ -75,7 +79,19 @@ class ProductionWorker:
 
 def main():
 
-    prod_worker_1 = ProductionWorker()
+    try:
+        name = input("\nPlease enter employee's name: ")
+        number = input("\nPlease enter employee's number: ")
+        shift = int(input(
+            "\nPlease employee's shift time - enter 1 for daytime, or 2 for nighttime: "))
+        pay_rate = input(
+            "\nPlease enter employee hourly wage, do not enter symbols such as the dollar sign: ")
+    except ValueError:
+        print("\nPlease enter 1 for daytime shift, or 2 for nighttime shift.")
+        main()
+
+    prod_worker_1 = ProductionWorker(name, number, shift, pay_rate)
+    print(prod_worker_1)
 
 
 main()
