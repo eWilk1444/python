@@ -7,6 +7,7 @@ The except block should catch the InvalidInputError and print an error message.
 The else block should print a confirmation message if the input is valid.
 The finally block should print a message indicating the end of the program's execution.
 Ensure the program gracefully handles the exception and continues to prompt the user until a valid number is entered. (call the program again)
+https://chatgpt.com/share/67450da2-d754-800f-81d3-91d433445867 
 """
 
 
@@ -30,21 +31,19 @@ def test():
     while valid == False:
         number = input("Please enter a number: ")
         if number.isnumeric():
-            print("That number is valid.")
             valid = True
             return number
         else:
-            raise NotNumericNumber
-            return number
+            raise NotNumericNumber()
 
 
 def main():
     try:
         test()
-    except Exception as e:
-        print(e)
-        test()
-
+    except NotNumericNumber as e:
+        error_message = e.message
+        print(error_message)
+        main()
     else:
         print("That is a valid number.")
     finally:
