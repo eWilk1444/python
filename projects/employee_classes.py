@@ -76,10 +76,10 @@ class ProductionWorker(Employee):
     def __str__(self):
         return f"{super().__str__()}, Shift: {self.__shift}, Wage: {self.__pay_rate})"
 
-
+# maib logic
 def main():
 
-    try:
+    try: # mutators used to change object's variables and prints to terminal
         name = input("\nPlease enter employee's name: ")
         number = int(input("\nPlease enter employee's number: "))
         shift = int(input(
@@ -93,5 +93,5 @@ def main():
     except Exception as e:
         print(f"Oops! Something went wrong! {e}")
 
-
+# invoking main
 main()
