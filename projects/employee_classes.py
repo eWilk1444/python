@@ -81,17 +81,17 @@ def main():
 
     try:
         name = input("\nPlease enter employee's name: ")
-        number = input("\nPlease enter employee's number: ")
+        number = int(input("\nPlease enter employee's number: "))
         shift = int(input(
             "\nPlease employee's shift time - enter 1 for daytime, or 2 for nighttime: "))
-        pay_rate = input(
-            "\nPlease enter employee hourly wage, do not enter symbols such as the dollar sign: ")
+        pay_rate = float(input(
+            "\nPlease enter employee hourly wage, do not enter symbols such as the dollar sign: "))
+        prod_worker_1 = ProductionWorker(name, number, shift, pay_rate)
+        print(prod_worker_1)
     except ValueError:
-        print("\nPlease enter 1 for daytime shift, or 2 for nighttime shift.")
-        main()
-
-    prod_worker_1 = ProductionWorker(name, number, shift, pay_rate)
-    print(prod_worker_1)
+        print(f"\nWhoops! Please only enter numbers when filling out: Employee Number, Shift Type, and Hourly Wage.")
+    except Exception as e:
+        print(f"Oops! Something went wrong! {e}")
 
 
 main()
