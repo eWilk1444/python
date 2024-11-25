@@ -14,6 +14,7 @@ Submission: Submit both your personal_diary.py file and the diary.txt file conta
 
 
 def main():
+    # gathering input
     date = input("Please enter the date: ")
     time = input("Please enter the time: ")
     entry = input("Write diary entry here: ")
@@ -23,4 +24,5 @@ def main():
         file.write(f"{date}\n{time}\n{entry}\n")
 
 
+# invoking main
 main()
