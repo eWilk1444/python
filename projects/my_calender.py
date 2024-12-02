@@ -26,18 +26,19 @@ import datetime
 
 def main():
     try:
-        current_year = datetime.datetime.now().year
-        cal = calendar.Calendar()
+        current_year = datetime.datetime.now().year  # get current year
+        cal = calendar.Calendar()  # initalize calender object for convenient formatting
         birth_month = int(
             input("\nPlease enter your birth month: Jan = 1, Feb = 2, etc.  "))
-        if 1 <= birth_month <= 12:
+        if 1 <= birth_month <= 12:  # makes sure that birth_month is a legitimate value for a calender to display
             print(calendar.month(current_year, birth_month))
         else:
-            raise ValueError
+            raise ValueError  # if not, it's not a real, positive number so raise exception
     except ValueError:
         print("\nPlease only enter positive, real numbers.")
-    except Exception as e:
+    except Exception as e:  # catches if they turn off the computer or their CPU explodes or something
         print(f"\nError: {e}")
 
 
+# invoking main
 main()
