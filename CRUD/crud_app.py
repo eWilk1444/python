@@ -53,7 +53,7 @@ def create_record(user):
     last_name = input("Enter the last name of person: ").capitalize()
     phone_number = input(
         "Enter the phone number of person, do not include country codes (USA = 1) and use hyphens (123-456-7890): ")
-    record = first_name + ", " + last_name + ", " + phone_number + "\n"
+    record = first_name + "," + last_name + "," + phone_number + "\n"
     user.append(record)
     # print(user)
     save_to_file(user)
@@ -82,8 +82,21 @@ def save_to_file():
 def find_in_file(user):
     # find user, return index of user
     # search by phone number
-    # for V2 - allow searching by first/last name
+    # TODO for V2 - allow searching by first/last name
     print("Finding record in file...")
+    phone = input(
+        "Please enter the phone number for the person you wish to find (include hyphens and do not include country code): ")
+    my_index = 0
+    for line in user:
+        line = line.strip("\n")
+        record = line.split(',')
+        print("record")
+        if record[2] == phone:
+            print("Record found at index", line)
+            return my_index
+        else:
+            my_index += 1
+    print("Record not found for phone number: " + phone)
 
 
 def update_file(user):
