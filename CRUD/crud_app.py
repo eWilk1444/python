@@ -1,69 +1,71 @@
+"""
+    Create, Read, Update, Delete
+"""
 
 
-def main_menu():
-    print("Menu:")
-    while True:
-        try:
-            print("\\nWelcome! You can create new email entries, change email addresses, delete entries, or display entries.")
-            print("1. Create a new entry")
-            print("2. Display an entry by last name")
-            print("3. Update an existing entry")
-            print("4. Remove an entry")
-            print("5. Quit")
-            choice = int(input("Please enter the number of your selection: "))
-            if 1 <= choice <= 5:
-                return choice
-            else:
-                print("That is not a valid number. Try again.")
-        except ValueError:
-            print("That is not a valid number. Try again.")
+def menu(user):
+    print("Welcome, please select an option from the following.")
+    # display options, accept number, then call functions
+    print("1. Search for and display a record")
+    print("2. Create a new record")
+    print("3. Update an existing record")
+    print("4. Delete a record")
+    print("5. Quit")
 
 
-def check():
-    print("Checking the system...")
+def check_for_file():
+    print("Checking if file exists...")
 
 
-def create():
-    print("Creating a new entry...")
+def save_to_file():
+    print("Saving to file...")
 
 
-def read():
-    print("Reading an entry...")
+def create_record():
+    print("Creating record...")
 
 
-def update():
-    print("Updating an entry...")
+def read_file():
+    print("Reading file...")
 
 
-def delete():
-    print("Deleting an entry...")
+def find_in_file():
+    print("Finding record in file...")
 
 
-def check():
-    try:
-        file = open("customer_list.txt", 'r')
-        lines = file.readlines()
-        file.close()
-        return lines
-    except FileNotFoundError:
-        print("Customer list does not exist. Creating a new file...")
-        return []
+def update_file():
+    print("Updating file...")
 
 
-def create():
-    customer = check()
-    fname = input("Please enter the customer\'s first name: ")
-    lname = input("Please enter the customer\'s last name: ")
-    phone = input("Please enter the customer\'s phone: ")
-    email = input("Please enter the customer\'s email: ")
-    entry = f"{fname}, {lname}, {phone}, {email}\\n"
-    customer.append(entry)
-    save(customer)
+def delete_from_file():
+    print("Deleting record from file...")
 
 
-def save(output):
-    file = open("customer_list.txt", 'w')
-    for line in output:
-        file.write(line)
-    file.close()
-    print("File updated.")
+def display_record():
+    print("Displaying record...")
+
+
+def main():
+    # menu for user
+    # user will be the list of records
+    user = check_for_file()  # check if file exists, yes = copy, no = create
+    menu(user)
+
+    # check_for_file()  # does it exist, else create
+
+    # save_to_file()  # save list to file
+
+    # create_record()  # creating new record
+
+    # read_file()  # read from file
+
+    # find_in_file()  # get record and display
+
+    # update_file()  # change previous record
+
+    # delete_from_file()  # delete record
+
+    # display_record()  # display record
+
+
+main()
