@@ -1,5 +1,8 @@
 """
     Create, Read, Update, Delete
+
+    Mr Chat was not very useful tbh, just figured it out myself while trying to formulate a real prompt https://chatgpt.com/share/67575f36-4640-800f-b658-ec7744ccda33 
+
 """
 import os
 
@@ -93,7 +96,6 @@ def find_in_file(user):
         line = line.strip("\n")
         # seperates each element (first name, last name, email)
         record = line.split(',')
-        print("record")
         # if email from record is same as email input, print confirmation and return index
         if record[2] == email:
             print("Record found at index", line)
@@ -176,18 +178,23 @@ def display_record(user):
     # print formatted record
     try:
         print("Displaying record...")
-        desired_user = find_in_file(user)
+        desired_user_index = find_in_file(user)
 
-        if (type(desired_user)) == int:
+        if (type(desired_user_index)) == int:
             print("Account found!")
-            print(f"The record is: {user[desired_user]}")
+            print(f"The record is: {user[desired_user_index]}")
         else:
             print(f"Record not found! {user}")
 
-        print(desired_user)
+        indexed_user = user[desired_user_index]
+        indexed_user_list = indexed_user.split(",")
+        print(f"First Name: {indexed_user_list[0]}\nLast Name: {
+              indexed_user_list[1]}\nEmail: {indexed_user_list[2]}")
 
-    except Exception as e:
-        print(f"Invalid menu choice, {e}")
+
+s
+except Exception as e:
+    print(f"Problem with displaying record, {e}")
 
 
 def main():
