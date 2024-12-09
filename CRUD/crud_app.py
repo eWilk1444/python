@@ -8,17 +8,17 @@ def menu():
     try:
         user = check_for_file()
         print(user)  # for errors
-        print("Welcome, you have the following options:")
+        print("\nWelcome, you have the following options:")
         choice = 0
         while choice != 5:
             # display options, accept selection, then call functions
-            print("1. Search for and display a record")
+            print("\n1. Search for and display a record")
             print("2. Create a new record")
             print("3. Update an existing record")
             print("4. Delete a record")
             print("5. Quit")
             choice = int(
-                input("Enter the number associated with your selection: "))
+                input("\nEnter the number associated with your selection: "))
             if choice == 1:
                 display_record(user)
             elif choice == 2:
@@ -173,9 +173,23 @@ def delete_record(user):
 
 def display_record(user):
     print("Displaying record...")
-    my_index = find_in_file(user)
+    desired_user = find_in_file(user)
     # call search, get index
     # print formatted record
+    try:
+        print("Displaying record...")
+        desired_user = find_in_file(user)
+
+        if (type(desired_user)) == int:
+            print("Account found!")
+            print(f"The record is: {user[desired_user]}")
+        else:
+            print(f"Record not found! {user}")
+
+        print(f"First Name: {desired_user[0]}\nLast Name: {
+              desired_user[1]}\nEmail: {desired_user[2]}")
+    except Exception as e:
+        print(f"Invalid menu choice, {e}")
 
 
 def main():
