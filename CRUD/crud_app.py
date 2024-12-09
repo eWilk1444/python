@@ -111,9 +111,7 @@ def update_file(user):
         new_user_details = user[desired_user].split(",")
         for item in new_user_details:
             print(item)
-        if isinstance(user, str):
-            print(desired_user)
-        elif isinstance(user, int):
+        if (type(desired_user)) == int:
             print("Account found!")
             print(f"The record is: {user[desired_user]}")
         else:
@@ -158,9 +156,7 @@ def delete_record(user):
     try:
         print("Deleting file...")
         desired_user = find_in_file(user)
-        if isinstance(user, str):
-            print(desired_user)
-        if isinstance(user, int):
+        if (type(desired_user)) == int:
             print("Account found!")
             print(f"The record is: {user[desired_user]}")
         else:
@@ -173,7 +169,7 @@ def delete_record(user):
                 input("Are you sure you want to delete this record? Type 'Yes' or 'No': ")).lower
 
             if choice == 'yes':
-                desired_user.pop()
+                user.pop(desired_user)
                 exists = False
             elif choice == 'no':
                 exists = False
@@ -183,6 +179,7 @@ def delete_record(user):
                 exists = False
 
         save_to_file(user)
+        print("Record deleted successfully.")
 
     except Exception as e:
         print(f"Invalid menu choice, {e}")
