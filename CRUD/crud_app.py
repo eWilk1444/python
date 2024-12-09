@@ -152,11 +152,40 @@ def update_file(user):
 
 
 def delete_record(user):
-    print("Deleting file...")
-    find_in_file(user)
     # call search, get index
     # pop index
     # call save, passing 'user'
+    try:
+        print("Deleting file...")
+        desired_user = find_in_file(user)
+        if isinstance(user, str):
+            print(desired_user)
+        if isinstance(user, int):
+            print("Account found!")
+            print(f"The record is: {user[desired_user]}")
+        else:
+            print(f"Record not found! {user}")
+
+        # changing items in list menu
+        exists = True
+        while exists:
+            choice = str(
+                input("Are you sure you want to delete this record? Type 'Yes' or 'No': ")).lower
+
+            if choice == 'yes':
+                desired_user.pop()
+                exists = False
+            elif choice == 'no':
+                exists = False
+                menu()
+            else:
+                print("That is not a valid choice.")
+                exists = False
+
+        save_to_file(user)
+
+    except Exception as e:
+        print(f"Invalid menu choice, {e}")
 
 
 def display_record(user):
