@@ -156,28 +156,14 @@ def delete_record(user):
     try:
         print("Deleting file...")
         desired_user = find_in_file(user)
+
         if (type(desired_user)) == int:
             print("Account found!")
             print(f"The record is: {user[desired_user]}")
         else:
             print(f"Record not found! {user}")
 
-        # changing items in list menu
-        exists = True
-        while exists:
-            choice = str(
-                input("Are you sure you want to delete this record? Type 'Yes' or 'No': ")).lower
-
-            if choice == 'yes':
-                user.pop(desired_user)
-                exists = False
-            elif choice == 'no':
-                exists = False
-                menu()
-            else:
-                print("That is not a valid choice.")
-                exists = False
-
+        user.pop(desired_user)
         save_to_file(user)
         print("Record deleted successfully.")
 
