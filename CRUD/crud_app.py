@@ -6,6 +6,8 @@ import os
 
 def menu(user):
     try:
+        user = check_for_file()
+        print(customer)  # for errors
         print("Welcome, you have the following options:")
         choice = 0
         while choice != 5:
@@ -152,19 +154,23 @@ def update_file(user):
 def delete_record(user):
     print("Deleting file...")
     find_in_file(user)
+    # call search, get index
+    # pop index
+    # call save, passing 'user'
 
 
 def display_record(user):
     print("Displaying record...")
     my_index = find_in_file(user)
+    # call search, get index
+    # print formatted record
 
 
 def main():
     # menu for user
     # user will be the list of records
-    user = check_for_file()  # check if file exists, yes = copy, no = create
     print(user)
-    menu(user)
+    menu()
 
     # check_for_file()  # does it exist, else create
 
