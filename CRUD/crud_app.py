@@ -4,10 +4,10 @@
 import os
 
 
-def menu(user):
+def menu():
     try:
         user = check_for_file()
-        print(customer)  # for errors
+        print(user)  # for errors
         print("Welcome, you have the following options:")
         choice = 0
         while choice != 5:
@@ -61,7 +61,7 @@ def create_record(user):
     save_to_file(user)
 
 
-def save_to_file():
+def save_to_file(user):
     # call when record is saved
     #
     print("Saving to file...")
@@ -113,7 +113,7 @@ def update_file(user):
             print(item)
         if isinstance(user, str):
             print(desired_user)
-        if isinstance(user, int):
+        elif isinstance(user, int):
             print("Account found!")
             print(f"The record is: {user[desired_user]}")
         else:
@@ -122,7 +122,7 @@ def update_file(user):
         # changing items in list menu
         choice = True
         while choice:
-            print("1: Change First Name\n2:Change Last Name\nChange Email\n")
+            print("1: Change First Name\n2: Change Last Name\n3: Change Email\n")
             choice = int(
                 input("Please select an option from the list above: "))
 
@@ -198,7 +198,6 @@ def display_record(user):
 def main():
     # menu for user
     # user will be the list of records
-    print(user)
     menu()
 
     # check_for_file()  # does it exist, else create
