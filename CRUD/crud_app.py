@@ -172,8 +172,6 @@ def delete_record(user):
 
 
 def display_record(user):
-    print("Displaying record...")
-    desired_user = find_in_file(user)
     # call search, get index
     # print formatted record
     try:
@@ -186,8 +184,8 @@ def display_record(user):
         else:
             print(f"Record not found! {user}")
 
-        print(f"First Name: {desired_user[0]}\nLast Name: {
-              desired_user[1]}\nEmail: {desired_user[2]}")
+        print(desired_user)
+
     except Exception as e:
         print(f"Invalid menu choice, {e}")
 
